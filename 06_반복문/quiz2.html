@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2</title>
+</head>
+<body>
+<!-- Q2) 1-10까지 합을 구하는데, 1. 중간 과정도 다 출력, 2. 최종값 3. 외부로부터 자료받아서까지 -->
+
+    <script>
+        let sum = 0
+        for(let i=1; i<=10; i++){
+            sum = sum + i
+            document.write(sum + '&nbsp')
+        }document.write('<br>' + sum + '&nbsp' + '<hr>')
+
+
+        let sum2 = 0
+        let j = parseInt(prompt('원하는 숫자를 입력하세요.'));
+        for(j; j<=10; j++){
+            sum2 = sum2 + j
+            document.write(sum2 + '&nbsp')
+        }document.write('<br>' + sum2 + '&nbsp')
+
+    </script>
+</body>
+</html>

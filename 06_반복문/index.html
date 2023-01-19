@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문1</title>
+</head>
+<body>
+    <pre>
+        반복문: 반복처리/연속처리
+        for(시작값;조건식이 참일때까지 계속해서 반복;증감값){
+            실행할 명령문
+        }
+
+        i, j, k
+
+    </pre>
+    <script>
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('안녕하세요 이젠입니다<br>');
+        document.write('<hr>');
+
+        for(let i=1; i<=10; i++){           // i는 지역변수이기 때문에 이 for문을 벗어나면 새로 또 쓸수 잇어
+        document.write('안녕하세요 이젠입니다<br>');
+        }
+
+        for(let i=1; i<=10; i+=2){
+            document.write(i + "&nbsp;&nbsp;&nbsp;")
+        }
+        document.write('<hr>');
+
+        for(let i=10; i>=1; i--){
+            document.write(i + "&nbsp;&nbsp;&nbsp;<br>")        
+        }
+        for(let i=1; i<100; i++){
+            document.write(i + "&nbsp;&nbsp;&nbsp;")     
+        }
+        document.write('<hr>');
+
+        // 1-100까지 짝수값만 찾으려면?
+        for(let i=1; i<=100; i++){
+            if(i%2 == 0){
+                document.write(i + "&nbsp;&nbsp;&nbsp;")  
+            }
+        }
+        document.write('<hr>');
+
+
+        // 1~10까지 합을 구하는 프로그램?
+        let tot = 0;    // 누적은 값을 먼저 할당해줘야 한다.
+        for(let i=1; i<=10; i++){
+            tot = tot + i;
+            document.write(tot+"<br>")  
+        }
+            document.write(tot+"<br>")    // 반복문의 {} 범위 밖에 작성하면 마지막 결과값만 1번 출력한다.
+
+        // 1~10까지 경고창?
+        for(let i=1; i<=10; i++){
+            // alert(i);
+        }
+
+        // 반복문을 조건에 맞게 실행하다가, 중간에 반복문을 빠져나가도록?
+        let hap = 0;
+        for(let i=1; i<=10; i++){
+            if(i==5){
+                break;
+            }
+            hap += i
+        }
+        // alert(i)     => i는 지역변수니까 블록문 밖에서는 출력이 안된다구!
+        alert(hap)      // hap은 전역변수니까 되구..
+
+        //무한 반복
+        // for(;;){
+        //     alert('무한반복')
+        // }   // 중간에 빠져나갈 수가 없이 계속해서 반복이 실행됨
+
+
+        // 동적 데이터 추가
+        
+        let list = '<ul>'
+        for(let i=1;i<=10;i++){
+            list += "<li>리스트"+ i +"</li>"
+        }
+
+        list += '</ul>'
+        
+        document.write(list)
+
+        // 중첩 for문
+        // 초등학교 1-6학년, 매 학년에 1-10반 출력하는 프로그램
+
+        let grade = '';
+        for(let i=1; i<=6; i++){
+            grade += '========' + i +'학년========<br>'
+            for(let j=1; j<=10; j++){
+                grade += i + '학년' + j + '반<br>'
+            }
+            document.write('<br>');
+        }
+        document.write(grade);
+
+    </script>
+</body>
+</html>
+
+<!-- Q1) 1-100까지 수 중에서 출력할 때 10단위로 줄바꿈 -->
+
+<!-- Q2) 1-10까지 합을 구하는데, 1. 중간 과정도 다 출력, 2. 최종값 3. 외부로부터 자료받아서까지 -->
+
+Q3) 동적데이터(생년월일 년:2023 -1900년, 월:1-12월, 일:1-31일)
+
+<!-- Q4) 구구단 출력 1-9단까지 -->
+
+<!-- Q5) 사용자로부터 단수를 입력받아서 해당 단수의 구구단 출력 -->
+
+<!-- Q6) 인증하기(틀리면 무한반복)  -->

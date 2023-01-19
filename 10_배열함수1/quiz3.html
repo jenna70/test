@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz3</title>
+</head>
+<body>
+    <script>
+
+// Q3) for in문을 사용해 배열데이터 휴대폰번호와 지역번호를 검색해
+//     <select><option>을 이용해 동적데이터로 처리 
+
+let animal= [ "Aardvark","Albatross","Alligator","Alpaca","Ant","Ape","Armadillo","Donkey","Baboon",
+
+"Badger",
+
+"Barracuda",
+
+"Bat",
+
+"Bear",
+
+"Beaver",
+
+"Bee",
+
+"Bison",
+
+"Cat",
+
+"Caterpillar",
+
+"Cattle",
+
+"Chamois",
+
+"Cheetah",
+
+"Chicken",
+
+"Chimpanzee",
+
+"Chinchilla",
+
+"Chough",
+
+"Clam",
+
+"Cobra",
+
+"Cockroach",
+
+"Cod",
+
+"Cormorant",
+
+"Dugong",
+
+"Dunlin",
+
+"Eagle",
+
+"Echidna",
+
+"Eel",
+
+"Eland",
+
+"Elephant",
+
+"Elk",
+
+"Emu",
+
+"Falcon",
+
+"Ferret",
+
+"Finch",
+
+"Fish",
+
+"Flamingo",
+
+"Fly",
+
+"Fox",
+
+"Frog",
+
+"Gaur", 
+
+"Gazelle",
+
+"Gerbil",
+
+"Giraffe",
+
+"Grasshopper",
+
+"Heron",
+
+"Herring",
+
+"Hippopotamus",
+
+"Hornet",
+
+"Horse",
+
+"Kangaroo",
+
+"Kingfisher",
+
+"Koala",
+
+"Kookabura",
+
+"Moose",
+
+"Narwhal",
+
+"Newt",
+
+"Nightingale",
+
+"Octopus",
+
+"Okapi",
+
+"Opossum", 
+
+"Quail",
+
+"Quelea",
+
+"Quetzal",
+
+"Rabbit", 
+
+"Raccoon",
+
+"Rail",
+
+"Ram",
+
+"Rat",
+
+"Raven",
+
+"Red deer",
+
+"Sandpiper",
+
+"Sardine",
+
+"Sparrow",
+
+"Spider",
+
+"Spoonbill",
+
+"Squid",
+
+"Squirrel",
+
+"Starling",
+
+"Stingray",
+
+"Tiger",
+
+"Toad",
+
+"Whale",
+
+"Wildcat",
+
+"Wolf",
+
+"Worm",
+
+"Wren",
+
+"Yak",
+
+"Zebra"
+]
+document.write('원본 배열: ' + animal + '<br><br>');
+
+animal.pop();
+document.write('1번) ' + animal + '<br><br>');
+
+animal.unshift('Dog');
+animal.sort();
+document.write('2번) ' + animal + '<br><br>');
+
+// alert(animal.indexOf("Moose")); -> 62번째
+animal.splice(62,0,'Mosquito','Mouse','Mule')
+animal.sort();
+document.write('3번) ' + animal + '<br><br>');
+
+document.write('4번) ' + animal.includes('Human') + '<br><br>');
+
+document.write('5번) ' + animal.includes('Cat') + '<br><br>');
+
+// alert(animal.indexOf('Red deer'))    -> 81번째
+
+animal[animal.indexOf("Red deer")] = "Deer";
+document.write('6번) ' + animal + '<br><br>');
+document.write(animal + "<br><br>");
+
+
+document.write("7. Spider부터 3개의 아이템을 기존 배열에서 제거<br>");
+animal.splice(animal.indexOf('Spider'), 3);
+document.write(animal + "<br><br>");
+
+
+document.write("8. 배열에서 Tiger 이후의 값 제거<br>");
+document.write(animal.slice(0, animal.indexOf("Tiger") + 1) + "<br><br>");
+
+
+animal.splice(animal.indexOf('Spider'), 3);
+document.write('7번) ' + animal + '<br><br>');
+
+
+document.write('8번) ');
+document.write(animal.slice(0, animal.indexOf('Tiger') + 1) + '<br><br>');
+
+
+let animal2 = animal.slice(7,15)
+document.write('9번) ' + animal2 + '<br><br>');
+
+
+document.write('10번) ' + animal.length + '개' + '<br><br>');
+
+
+// animal.reverse();
+document.write('11번) ' + animal + '<br><br>');
+
+
+let animal3 = animal.join('#')
+document.write('12번) ' + animal3 + '<br><br>');
+
+
+document.write('13번) ');
+
+document.write();
+for (i in animal){
+    if(i % 10 === 0)    
+        document.write("<br>");
+    document.write(animal[i] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+    
+}
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

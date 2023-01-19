@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열함수</title>
+</head>
+<body>
+    <h1>배열함수1</h1>
+    <p>자바스크립트에서 배열은 탐색, 수정, 삭제작업을 수행하기 위한 다양한 함수(메서드)를 제공한다.</p>
+    <ol>
+        <li>배열명.shift() : 배열에서 첫번째 원소(맨 앞에 있는 원소)를 제거하기</li>
+        <li>배열명.unshift() : 배열에서 첫번째 원소에 추가</li>
+        <li>배열명.pop() : 배열에서 마지막번째 요소를 제거</li>
+        <li>배열명.push() : 배열에서 마지막번째 요소를 추가</li>
+        <li>배열명.splice(요소를 넣을 공간의 뒷 index값,0(삽입할때는 0, 삭제할때는 1),삽입할 요소) : 배열의 중간에서 요소를 추가.제거</li>
+        <li>배열명.join() : 배열의 값 사이에 원하는 문자를 삽입</li>
+        <li>배열명.concat() : 2개의 배열을 하나로 합치기</li>
+        <li>배열명.reverse() : 배열을 역순으로 재배치</li>
+        <li>배열명.sort() : 배열의 값을 순서대로 정렬</li>
+
+        <li>배열명.includes() : 배열의 해당 값의 존재여부를 true/false로 확인</li>
+        <li>배열명.indexOf() : 배열의 색인값(index=key값)을 찾아줌</li>
+        <li>배열명.slice(시작index, 끝index) : 배열에서 시작index부터부터 끝index(끝index는 미포함)까지의 배열을 복사해서 리턴</li>        
+        <li>배열명.splice(시작점, 갯수) : 배열에서 시작점, 갯수만큼 삭제</li>
+    </ol>
+    <hr>
+    <script>
+        let frut = ['수박', '딸기', '복숭아'];
+        document.write(frut + '<br>');
+
+        frut.unshift('파인애플');       // 0번째 원소를 1번째로 밀어내고, 그 0번째 자리에 새로운 원소를 추가하는 것
+        document.write(frut + '<br>');
+
+        frut.shift();
+        document.write(frut + '<br>');
+
+        frut.push('파인애플');
+        document.write(frut + '<br>');
+
+        frut.pop();
+        document.write(frut + '<br>');
+
+        frut.splice(1,0,'파인애플');
+        document.write(frut + '<br>');
+
+        frut.splice(1,1);
+        document.write(frut + '<br>');
+
+        // frut.splice(1,0,'파인애플');
+        // document.write(frut + '<br>');
+
+        let frutJoin = frut.join(' | ');      // *주의* => join함수를 사용하면 "새로운" 배열명을 만들어서 '|'를 넣어주는 것임
+        document.write(frutJoin + '<br>');
+
+        let arr1 = [1,2,3,4,5,6];
+        let arr2 = [10,20,30,40,50,60];
+
+        let arr3 = arr1.concat(arr2);
+        document.write(arr3 + '<br>');
+
+        document.write(arr3.reverse() + '<br>');     // => reverse함수를 사용하면 원본 배열의 구조 자체가 재배치되어서 바뀌어버린다.
+        document.write(arr3 + '<br>');
+        document.write(arr3[0] + '<br>');
+
+        document.write(arr3.sort() + '<br>');
+        document.write(frut + '<br>');
+        // parseInt
+
+        document.write(frut.sort() + '<br>');
+
+        let arr1Slice = arr1.slice(1,2);
+        document.write(arr1Slice + '<br>');
+
+        let  arr1Slice2 = arr1.slice(2,5);
+        document.write(arr1Slice2 + '<br>');
+
+        arr1.splice(1);      // splice함수는 새로운 배열을 만들지 않고 원본 배열을 수정한다!
+        document.write(arr1 + '<br>');
+
+
+        let arr10 = ['a','b','c','d','e'];
+        let arr99 = arr10.slice(1,3);
+
+        document.write(arr99 + '<br>');
+        document.write(arr10 + '<br>');
+        document.write('원본: ' + arr10 + '<br>');
+
+        document.write(frut + '<br>');
+
+        frut.push('참외','자두','망고');
+        document.write(frut + '<br>')
+
+        frut.pop();
+        frut.pop();
+        frut.pop();
+        document.write(frut + '<br>')
+
+
+        // 문자열은 그 자체가 배열값이다.
+        let str = '대한민국';
+        document.write(str[0] + '<br>');
+        document.write(str[1] + '<br>');
+        document.write(str[2] + '<br>');
+        document.write(str[3] + '<br>');
+        
+
+        
+
+
+
+    </script>
+</body>
+</html>

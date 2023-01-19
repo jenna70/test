@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body>
+    <pre>
+        변수 -> 데이터를 보관하는 장소 (기억 장소)
+                변수는 반드시 선언하여 사용해야 함
+                선언 방법은 3가지가 있음
+                1. var 사용 -> 쓰지마..
+                2. let 사용
+                3. const 사용 (불멸의 선언)
+
+        변수의 종류
+        1. 전역변수 
+        2. 지역변수
+
+    </pre>
+    <script>
+        document.write('<hr>');
+
+        // let javaS = '자바스크립트';
+        // javaS = '스크립트';
+
+        // console.log(javaS);
+
+
+        // let 키워드를 사용할 때에는 동일한 변수를 재선언할 수 없기 때문에 (재선언시 오류 발생함)
+        // 변수의 값을 수정하고 싶을 때에는 let 키워드를 생략하고 변수값을 재할당하면 된다.
+
+        console.log(javaS);
+        var javaS = 100;    // 숫자는 따옴표 쓰지 않음
+        console.log(javaS);
+
+
+        console.log(a);
+        a = 100;
+        var a
+        console.log(a);
+
+        document.write('<h1>변수의 종류</h1>');
+
+        var z = '데이터';       // -> 전역변수임
+
+        function test(){
+            var x = '내부 데이터';      // -> x는 지역변수임 (함수의 블록문 안에서만 사용이 가능함)
+            console.log(x);
+        }
+        test();
+        console.log(z);
+        // console.log(x);   // x는 지역변수이기 때문에 해당 블록문 밖에서 참조할 수 없다.
+
+        for(var i = 1; i <5; i++){      // i는 지역변수
+            console.log(i);
+        }
+        console.log(i);
+
+        const vue = '프레임워크';
+        vue = '라이브러리';     // const로 변수를 선언하면 해당 변수의 값을 절!대! 수정할 수 없다 -> 협업할 때에 용이하게 쓰임
+        console.log('vue');
+
+
+
+    </script>
+</body>
+</html>
+
+<!-- <pre> : 내가 디자인한 그대로 화면에 출력하는 태그이다. 
+            => 앞으로 수업에서 이 태그에 설명 적어주신다고 함 -->

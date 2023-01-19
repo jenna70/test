@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2</title>
+</head>
+<body>
+    <script>
+                // 응용문제 2))
+                // 주민등록번호 성별코드를 입력받아서 1, 3은 남자, 2, 4는 여자로 alert 출력
+                // 단, 1-4 숫자가 아니면 이거 입력하라는 alert창 출력
+
+        let idnum = prompt('주민등록번호의 성별코드를 입력해주세요.','주민등록번호 뒷자리의 첫번째 숫자를 입력하시면 됩니다.' )
+        if(idnum==1 || idnum==3){
+            alert('남성입니다.');
+        }else if(idnum==2 || idnum==4){
+            alert('여성입니다.');
+        }else{
+            alert('1, 2, 3, 4중 해당하는 주민등록번호의 성별코드를 정확히 입력해주세요!')
+        }
+    </script>
+</body>
+</html>

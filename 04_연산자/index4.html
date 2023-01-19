@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입 연산자</title>
+</head>
+<body>
+    <pre>
+        변수 = 값
+        <!-- 해당 변수에 오른쪽에 있는 값을 대입한다. -->
+
+        값을 누적시킬 때 대입연산자를 사용해 표현한다.
+        a = a + 1 => a += 1      
+        a = a - 1 => a -= 1
+        a = a * 1 => a *= 1 
+        a = a / 1 => a /= 1
+        a = a % 1 => a %= 1
+    </pre>
+    <hr>
+    <script>
+        let num0 = 30, num1 = 10, num2 = 20, num3 = 30;
+        // js에서는 코드가 1줄일 경우에는 ";"를 생략할 수 있지만
+        // 문장이 2줄 이상으로 이어지는 경우에는 반드시 ";"를 사용해야 한다.
+
+        num3 = num3 + 10;
+        console.log(num3);
+
+        num3 += 10;
+        console.log(num3);
+        
+        num3 -= 10;
+        console.log(num3);
+        
+        num3 *= 10;
+        console.log(num3);
+
+        num3 /= 100;
+        console.log(num3);
+
+    </script>
+</body>
+</html>

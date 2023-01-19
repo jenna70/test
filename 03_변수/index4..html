@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 초기화</title>
+</head>
+<body>
+    <script>
+        // 데이터 초기화시
+        let name = '',age = 0, addr = '';      // 아무 문자 데이터가 없다고 초기화 시켜주는 것 => '누적'은 무조건 초기화시킨다
+        name = '이젠';      // 위에서 초기화한 변수에 '이젠'이라는 값을 할당해 줌
+        age = 30;
+        addr = '인천광역시';
+
+        console.log(name, age, addr);
+    </script>
+</body>
+</html>
+
+
+<!-- 
+* 누적
+a = a + 1
+a += 1
+a++
+위의 셋은 모두 같은 의미 -->

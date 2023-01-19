@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+body{
+  background: #222;
+  color: #fff;
+}
+
+ul li{
+  margin-bottom: 20px;
+}

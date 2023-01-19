@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form quiz6</title>
+    <link rel="stylesheet" href="./css/main6.css">
+</head>
+<body>
+    <h1>상품 주문서</h1>
+    <form id="form1" action="#">
+        <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+            <li>
+                <label for="name">이름</label>
+                <input type="text" autofocus required placeholder="여백없이 입력" id="name">
+            </li>
+            <li>
+                <label for="tel">연락처</label>
+                <input type="text" autofocus required placeholder="연락가능한 번호" id="tel">
+            </li>
+        </ul>
+        </fieldset>
+    </form>
+    <form id="form2" action="#">
+        <fieldset>
+        <legend>배송지 정보</legend>
+        <ul>
+            <li>
+                <label for="addr">주소</label>
+                <input type="text" style="width: 300px;" autofocus required id="addr">
+            </li>
+            <li>
+                <label for="tel">전화번호</label>
+                <input type="text" autofocus required id="tel2">
+            </li>
+
+            <li>
+                <label id="memo" for="addr">메모 </label>
+                <!-- <input type="memo" autofocus required id="memo"> -->
+                <textarea rows="3" cols="40"></textarea>
+            </li>
+
+        </ul>
+        </fieldset>
+    </form>
+    <form id="form3" action="#">
+        <fieldset>
+        <legend>주문 정보</legend>
+        <ul>
+            <li>
+                <label class="order_label" for="order1"></label>
+                <input type="checkbox" id="order1">과테말라 안티구아 (100g)
+                <input type="number" style="width: 45px;" value="0" min="0" id="order1-g" autofocus>개
+            </li>
+            <li>
+                <label class="order_label" for="order2"></label>
+                <input type="checkbox" id="order2">인도네시아 만델링 (100g)
+                <input type="number" style="width: 45px;" value="0" min="0" id="order2-g">개
+            </li>
+            <li>
+                <label class="order_label" for="order3"></label>
+                <input type="checkbox" id="order3">탐나는도다(블렌딩) (100g)
+                <input type="number" style="width: 45px;" value="0" min="0" id="order3-g">개
+            </li>
+        </ul>
+        </fieldset>
+        <div class="btn">
+            <button type="submit">주문하기</button>
+            <button type="reset">다시 작성</button>
+        </div>        
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2</title>
+</head>
+<body>
+    <script>
+
+// Q2) for in문을 사용해 배열데이터 휴대폰번호와 지역번호를 검색해
+//     <select><option>을 이용해 동적데이터로 처리 
+//     휴대폰통신사 010, 011, 016, 017, 018, 019
+//     지역번호 02등 17개
+    
+    let arr1 = ['skt', 'kt', 'lg']    
+    let arr2 = ['010', '011', '016', '017', '018', '019']
+    let arr3 = ['02', '051', '053', '032', '062', '042', '052', '044', '031', '033', '043', '041', '063', '061', '054', '055', '064']
+
+    let slt = '<select>'
+
+    for(let i in arr1)
+    slt += `<option>${arr1[i]}</option>`
+
+    slt += `</select>&nbsp;<select>`
+
+    for(let i in arr2)
+    slt += `<option>${arr2[i]}</option>`
+    slt += `</select>&nbsp;<select>`
+
+    for(let i in arr3)
+    slt += `<option>${arr3[i]}</option>`
+    slt += `</select>`
+
+    document.write(slt)
+
+    </script>
+</body>
+</html>

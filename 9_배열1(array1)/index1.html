@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 기초</title>
+</head>
+<body>
+    <h1>자바스크립트 배열이란?</h1>
+    <ol>
+        <li>연관된 데이터를 하나처럼 관리하고 싶을 때 사용</li>
+        <li>복수의 데이터를 제어할 수 있는 다양한 함수 제공</li>
+        <li>배열의 함수를 이용한 데이터의 편리한 조작 가능</li>
+    </ol>
+    <h2>배열을 선언하고 접근하는 방법</h2>
+    <ol>
+        <li>
+            let 변수명 = new Array(data1, datan);
+        </li>
+        <li>
+            let 변수명 = [data1, data2, datan];
+        </li>    
+        <li>
+            let 변수명 = [];
+        </li>
+    </ol>
+    <p>
+        배열에 접근할(호출할) 때 -> 배열변수명[index] 
+    </p>
+    <hr>
+
+    <script>
+        let arr1 = ['바나나', '포도', '수박']
+        console.log(arr1);
+        document.write('올해의 제철 과일은 ' + arr1 + '입니다<br />');
+        // 배열 전체를 출력
+
+        document.write('오늘의 추천 과일은 ' + arr1[2] + '입니다<br />');
+        // 원하는 값만 출력 -> 해당 배열변수명의 인덱스 값으로 접근 가능!
+
+        let arr2 = new Array('바나나', '포도', '수박')
+        // Array: 대문자로 생성됨 => '객체'임을 뜻한다
+        console.log(arr2);
+
+        let arr3 = []
+        arr3[0] = 100;
+        arr3[1] = 200;
+        arr3[2] = 300;
+        console.log(arr3);
+    </script>
+</body>
+</html>
+
+<!-- dom에서 2개 이상 복수의 객체는 배열과 같은 개념으로 처리하도록 되어있다. -->

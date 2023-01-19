@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz5</title>
+</head>
+<body>
+    <script>
+                   
+                // 응용문제 5)) 중첩if
+                // 설정된
+                // 설정된 id와 외부로부터 받은 id값과 맞으면 , pw 판별 
+                // 설정된 pw도 외부로부터 받은 pw값과 맞으면
+                // 1. 경고창) id가 일치x
+                // 2. id는 맞고 pw x
+                // 3. 다 맞으면 id님 반갑습니다!
+
+        let id = 'admin';
+        let pw = '12345';
+
+        let ipid = prompt('아이디를 입력해주세요.');        
+
+        if(ipid === id){
+            let ippw = prompt('비밀번호를 입력해주세요.');
+            if(ippw == pw){
+                alert(ipid + '님 환영합니다~!');        // 입력받은 아이디 -> ipid로 써야하는데 처음에 ${id}로 쓰는 실수를 해버렷네
+            }else{
+                alert('비밀번호를 잘못 입력하셨습니다.')
+            }
+        }else{
+            alert('아이디를 잘못 입력하셨습니다.');
+        }
+
+    </script>
+</body>
+</html>

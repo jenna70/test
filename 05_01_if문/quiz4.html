@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz4</title>
+</head>
+<body>
+    <script>
+        
+                // 응용문제 4))
+                // 국어, 영어, 수학, 전산점수 입력받아서 alert 출력
+                // 총점, 평균, 평점, 학점
+
+            let score1 = parseInt(prompt('국어점수를 입력해주세요.'));
+            let score2 = parseInt(prompt('영어점수를 입력해주세요.'));
+            let score3 = parseInt(prompt('수학점수를 입력해주세요.'));
+            let score4 = parseInt(prompt('전산점수를 입력해주세요.'));
+
+            let sum_score = (score1 + score2 + score3 + score4);
+            let avg_score = (score1+score2+score3+score4)/4
+
+            let grade1; //평점
+            let grade2; //학점
+
+            if(avg_score>=95){
+                grade1='수', grade2='A+'
+            }else if(avg_score>=90){
+                grade1='수', grade2='A'
+            }else if(avg_score>=85){
+                grade1='우', grade2='B+'
+            }else if(avg_score>=80){
+                grade1='우', grade2='B+'
+            }else if(avg_score>=75){
+                grade1='미', grade2='C+'
+            }else if(avg_score>=70){
+                grade1='미', grade2='C'
+            }else if(avg_score>=65){
+                grade1='양', grade2='D+'
+            }else if(avg_score>=60){
+                grade1='양', grade2='D'
+            }else if(avg_score<60){
+                grade1='가', grade2='F'
+            }else{
+                alert('점수를 정확하게 입력해주세요!')
+            }
+            alert(`
+            국어점수: ${score1}점
+            영어점수: ${score2}점
+            수학점수: ${score3}점
+            전산점수: ${score4}점
+            총점: ${sum_score}점
+            평균: ${avg_score}점
+            평점: ${grade1}
+            학점: ${grade2}
+            `)
+
+    </script>
+</body>
+</html>

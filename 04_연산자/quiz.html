@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>총점, 평균 구하기</title>
+</head>
+<body>
+    <script>
+        let grade1 = parseInt(prompt('국어점수를 입력하세요'));
+        let grade2 = parseInt(prompt('영어점수를 입력하세요'));
+        let grade3 = parseInt(prompt('수학점수를 입력하세요'));
+        let grade4 = parseInt(prompt('전산점수를 입력하세요'));
+
+        // 합계
+        let sum = grade1 + grade2 + grade3 + grade4;
+        // 평균
+        let avrg = (grade1 + grade2 + grade3 + grade4)/4;
+
+        alert(`
+        국어점수: ${grade1}
+        영어점수: ${grade2}
+        수학점수: ${grade3}
+        전산점수: ${grade4}
+        합계: ${sum}
+        평균: ${avrg}
+        `)
+        
+        alert(
+        " 국어점수: " + grade1 + 
+        "\n" + " 영어점수: " + grade2 +
+        "\n" + " 수학점수: " + grade3 +
+        "\n" + " 전산점수: " + grade4 +
+        "\n" + " 합계: " + sum +
+        "\n" + " 평균: " + avrg
+        )
+        
+        // alert창에서는 html 태그를 사용할 수 없다 => html 태그를 사용할 수 없는 경우에는 이스케이프 문자열을 사용해 줄바꿈을 제어할 수 있다.
+
+    </script>
+</body>
+</html>

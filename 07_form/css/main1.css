@@ -1,0 +1,16 @@
+
+* {
+    list-style: none;
+}
+
+ul li{
+    margin-bottom: 20px;
+    /* text-align: right; */
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    /* border: 1px solid blue; */
+}

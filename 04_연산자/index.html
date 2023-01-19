@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술연산자</title>
+</head>
+<body>
+    <pre>
+        1. 산술연산자
+        +, -, *, /, %(나머지값)
+        + : 더하기 연산을 할 때, 서로 다른 성격을 연결할 때
+            ex) "문자열" + 숫자 
+            ex) "문자열" + 숫자 + "문자열"
+            ex) "문자열" + 숫자 + "문자열" + 변수
+    </pre>
+    <hr>
+    <script>
+        // let num1 = 100;
+        // let num2 = 200;
+        // let num3 = 300;
+            // 아래처럼 표현하는 것을 권장 (효율적)
+
+        let num1 = 100, num2 = 200, num3 = 300, num4, num5, num6;
+
+        num4 = num1 + num2 + num3
+        document.write("합= " + num4 + '<br />');
+
+        num5 = num1 - num2 -num3;
+        document.write("차= " + num5 + '<br />');
+
+        num4 = num1 * num2 * num3
+        document.write("곱= " + num4 + '<br />');
+
+        num5 = num1 / num2
+        document.write("몫= " + num5 + '<br />');
+
+        num6 = num1 % num2
+        document.write("나머지= " + num6 + '<br />');
+    </script>
+</body>
+</html>

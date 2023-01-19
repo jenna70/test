@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자</title>
+</head>
+<body>
+    <pre>
+        논리 연산자도 결과값을 true/flase로 리턴한다.
+        <!-- 리턴: 결과값을 알려주는 것 -->
+        1. && : and. 2가지 이상의 조건이 모두 참일 때 결과값이 true
+        <!-- and연산자는 범위 사이에 있는 값에 대해 코드를 작성할 때 많이 사용하게 될 것 -->
+        2. || : or. 2가지 이상의 조건 중에서 하나라도 참일 때 결과값이 true
+        3. ! : not. 논리 부정
+               ex) !false = true 
+               ex) false0 = true ?
+    </pre>
+    <hr>
+    <script>
+        let a = true, b = !a;
+
+        console.log(a,b);
+        // 여러 개의 값을 출력하고 싶을 때에는 ","를 사용하면 된다.
+
+        let num1 = 10;
+        let num2 = 100;
+        
+        let num3 = num1 <= 9 && num2 >= 100;
+        //            거짓          참          => 거짓이 하나 있기 때문에 false를 출력하게 된다.
+        console.log(num3);
+
+        let num4 = num1 <= 9 || num2 >= 100;
+        //            거짓          참          => 참이 하나 있기 때문에 true를 출력하게 된다.
+        console.log(num4);
+    </script>
+</body>
+</html>
