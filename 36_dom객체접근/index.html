@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM객체를 자바스크립트 선택자로 접근하는 방법</title>
+</head>
+<body>
+     <h1>큰 제목</h1>
+     <p>문단1</p>
+     <p>문단2</p>
+     <p>문단3</p>
+    <ul class="list">
+        <li class="first">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ul class="list">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+    </ul>
+    <h2 id="tit">제목</h2>
+    <button id="btn">확인</button>
+    <!-- h태그, button태그는 한개여도 배열로 처리된다 ->  id 지정해서 써야함 -->
+
+    <script>
+        let ppp = document.getElementsByTagName('p');
+        // 자바스크립트 엔진이 html 머라고?? 
+        // 자바스크립트의 태그들 : 하나하나가 모두 객체이다.
+        // 위와 같이 style을 적용할 때에는 카멜기법을 사용해야 한다. (-을 사용할 수 없기 때문에)
+        // console.log(ppp);
+        ppp[0].style.color='red';
+        // DOM에서 2개 이상은 배열로 처리해버림 => 배열[인덱스값]으로 접근해서 style을 적용해야 한다.
+        // class는 2개 이상, id는 단 1개
+
+        let tit = document.getElementsByTagName('h1');
+        tit[0].style.color='blue'
+
+        document.getElementById('tit').style.fontSize='100px'
+        document.getElementById('tit').style.color='red'
+        document.getElementById('tit').style.fontWeight='bold'
+        document.getElementById('tit').style.border='1px solid #000'
+        document.getElementById('tit').style.background='yellow'
+        // 변수로 선언해서 써야 메모리에 값을 저장해놓고 빠른 처리속도로 해당 내용을 불러올 수 있다(공부해서 추가로 내용 정리하기)
+        // 일일히 하나씩 쓰면 위에서부터 한줄씩 코드 검사해서 실행하므로 느려짐
+
+        let list = document.getElementsByClassName('list');
+        console.log(list);
+
+        let li1 = document.querySelector('.list .first');
+        console.log(li1);
+        // css 선택자 접근방식과 동일하게 접근하려면 qSelector 사용하면 된다.
+
+        let btn = document.getElementById('btn');
+        console.log(btn);
+
+        // 자바스크립트 이벤트
+        btn.addEventListener('click',function(){
+            // 할일 코드를 코딩한다
+            btn.style.fontSize='100px';
+        })
+        // addEventListner 함수:
+
+    </script>
+</body>
+</html>
+
+<!-- 
+    변수 선언해서 써라
+    2개 이상은 배열로 처리한다
+    선택자 종류: getElementById, 
+ -->

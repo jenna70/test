@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+<body>
+    <h1>forEach/forIn문을 이용한 반복 실행</h1>
+    <ul id="foreach"></ul>
+    <ul id="forin"></ul>
+
+    <script>
+    // let student = {
+    //         no:2001,
+    //         name:"jenna",
+    //         kon:100,
+    //         eng:90,
+    //         math:80
+    //     }
+
+    let fruit = ["딸기","바나나","수박","오렌지","키위"]
+
+
+        // forEach문의 문법
+        // Object.foreach(function(item,index){
+
+        // })        
+
+
+        fruit.forEach(function(item,index){    // 왼쪽과 같이 foEach문을 돌리면 배열 안의 데이터가 있는 동안 반복
+            document.getElementById('foreach').innerHTML += `<li>${fruit[index]}</li>`;
+            // document.getElementById('foreach').innerHTML += `<li>${item}</li>`;
+            // 위의 두줄은 같은 거임
+        })
+
+        document.querySelectorAll('#foreach li').forEach(function(item,index){
+            item.addEventListener('mouseenter',function(){
+                this.style.fontSize= '36px' })
+            item.addEventListener('mouseout',function(){
+                this.style.fontSize= '16px' })    
+        })
+        
+
+        // forIn문의 문법
+        // let 키값변수선언  => 키값 먼저 선언하기
+        // for(key값 in Object){
+
+        // }
+
+        // let j;
+        // for(j in student){
+        //     document.getElementById('forin').innerHTML += `<li>${j}:${student[j]}</li>`
+        // }
+
+    </script>
+</body>
+</html>

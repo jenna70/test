@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+
+#section{
+    width: 100%;
+    height: 100vh;
+    background: url('../images/bg_section_01.jpg') no-repeat     center     center;
+    /*                                                     위아래에서 가운데  좌우에서 가운데*/
+    background-size: cover;
+}
+
+#section .section_inner{
+    width: 1230px;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+#section .section_inner .txt_wrap .txt_date .jy_date{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+
+
+#section .section_inner .txt_wrap .txt_time .time{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#section .section_inner .txt_wrap .txt_email{
+    margin: 50px 0;
+}
+
+#section .section_inner .txt_wrap .txt_career{
+    margin: 50px 0;
+}
+
+#section .section_inner .txt_wrap .txt_portfolio{
+    margin: 80px 0;
+}
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz5</title>
+</head>
+<body>
+    <!-- Q5) 매개변수로 년도만 들어오면 (if)
+            출력은 (2023) -> 2023년도라고 출력할 수 있도록
+
+            날짜가 년도와 월만 들어오면 (if)
+            (2023, 1) -> 2023년도 1월
+
+            (2023, 1 , 17) -> 2023년도 1월 17일
+
+            document.write로 출력
+        --> 
+
+        <script>
+
+            function dataType(year,month,day){
+                if(year && month && day){
+                    return `${year}년도 ${month}월 ${day}일`
+                }
+                if(year && month){
+                    return `${year}년도 ${month}월`
+                }
+                if(year){
+                    return `${year}년도`
+                }
+            }
+
+            alert(dataType(2023))
+            alert(dataType(2023,1))
+            alert(dataType(2023,1,17))
+
+        </script>
+
+</body>
+</html>

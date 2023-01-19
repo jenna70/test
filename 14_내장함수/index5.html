@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form태그 안에서 값을 전달할 때</title>
+</head>
+<body>
+    <button type="button" value="치즈버거" onclick="burger(this.value)">치즈버거</button>
+    <button type="button" value="치킨버거" onclick="burger(this.value)">치킨버거</button>
+    <button type="button" value="불고기버거" onclick="burger(this.value)">불고기버거</button>
+    <button type="button" value="새우버거" onclick="burger(this.value)">새우버거</button>
+    <button type="button" value="더블버거" onclick="burger(this.value)">더블버거</button>
+
+    <script>
+        function burger(menu){
+            alert('고객님이 선택하신 버거는 ' + menu + '입니다.')
+        }
+
+    </script>
+</body>
+</html>

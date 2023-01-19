@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트다운 반복</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        // Q) 1초마다 1부터 10까지 카운팅을 계속 반복하도록 코딩
+        // let i = 1;
+        // function count(){
+        //     document.getElementById('box').innerHTML=i
+        //     if(i<10){
+        //         i++
+        //     }else{
+        //         i = 1
+        //     }
+        // }
+
+        // setInterval(function(){
+        //     count()            
+        // },1000)
+
+
+        // Q) 2번만 반복하고 카운트를 중지하도록 코딩
+        let i = 1;
+        function count(){
+            document.getElementById('box').innerHTML=i
+            if(i<10){
+                i++
+            }else{
+                i = 1
+            }
+        }
+
+        let countUp = setInterval(function(){
+            count()            
+        },1000)
+
+
+        setTimeout(function(){
+            clearInterval(countUp)
+        },20000)
+
+    </script>
+
+</body>
+</html>

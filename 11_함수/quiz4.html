@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz4</title>
+</head>
+<body>
+    <!-- Q4) x, y 값을 외부로부터 입력받아 두개를 더해 그 결과값을 alert 창에 반환해주는 프로그램 짜봐
+        -->
+
+        <script>
+            
+            function add(x,y){
+                let result = Number(x) + Number(y)
+                return result
+            }
+            let num1 = prompt('x의 값을 입력해주세요','x')
+            let num2 = prompt('y의 값을 입력해주세요','y')            
+
+            alert('두 수의 합은 ' + add(num1,num2) + '입니다.')
+
+        </script>
+</body>
+</html>

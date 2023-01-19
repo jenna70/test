@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+
+.exp {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -75%);
+}
+form {
+    margin : 0;
+}
+fieldset {
+    border : none;
+    margin : 0;
+    padding : 0;
+    width : 800px;
+    height: 220px;
+}
+h3 {
+    /* position: absolute;
+    left: 30%; */
+    margin-top : -2px;
+    font-size: 20px;
+    font-weight: bold;
+    background : rgba(128, 128, 128, 0.215);
+    padding : 5px 0;
+    text-indent: 40px;
+}
+.inner1 {
+    border : 1px solid rgba(128, 128, 128, 0.5);
+    width : 725px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    margin-top : 20px;
+    margin-right: 20px;
+}
+
+.inner1 ul {
+    list-style-type: circle;
+}
+
+.inner1 ul li {
+    font-size : 14.25px;
+    margin-bottom: 15px;
+}
+
+.inner1 ul li::marker{
+    color : rgba(128, 128, 128, 0.5);
+}
+
+table {
+    position: absolute;
+    width : 700px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100%);
+    border-top : 1px solid rgba(128, 128, 128, 0.5);
+    border-bottom : 1px solid rgba(128, 128, 128, 0.5);
+    margin-bottom : 10px;
+    text-align: center;
+    border-spacing: 0;
+}
+td {
+    padding : 5px 5px;
+}
+input {
+    margin-top : 5px;
+    margin-left : 10px;
+    width : 150px;
+    text-indent: 15px;
+}
+button {
+    width : 70px;
+    height: 25px;
+}
+tr td:first-child {
+    background-color: #f6f6f6;
+}
+tr:first-child td {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}

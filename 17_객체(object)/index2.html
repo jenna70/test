@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 메서드</title>
+</head>
+<body>
+    <script>
+
+        // 객체: 속성(property) + 함수  
+        //                          -> 함수는 실제로 동작시키는 기능
+
+        let hrm = {
+            no: "2001",
+            name: "Jenna",
+            age: 30,
+            addr: "서울특별시",
+            lang:{
+                en:"영어",
+                sp:"스페인어",
+                jp:"일본어",
+                ch:"중국어",                
+            },
+            pstn:"CEO",
+
+            info: function(){
+                alert(this.name)
+            }
+
+            // info:()=>{
+            //     alert(this.name)
+            // }
+            // this가 들어간 애들은 화살표함수 쓰면 안된다구!
+
+        }
+
+        // 객체 안에 함수를 호출하는 방법?
+        hrm.info()
+
+
+        // function test(){
+        //     alert("안녕하세용?")
+        // }
+        // test()
+        // // 일반 함수를 화살표함수로 바꿀 때
+        // let test2= ()=>alert("반가워요~")
+        // test2()
+
+
+        // this의 개념
+        let age= 30     // 왼쪽의 변수는 전역변수이다!
+        let person = {
+            name: "Ricky",
+            age: 50,
+            info:function(){
+                alert(this.age)
+                console.log(this)
+            }
+        }
+        person.info();
+
+
+
+    </script>
+</body>
+</html>

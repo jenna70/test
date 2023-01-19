@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자함수</title>
+</head>
+<body>
+    <script>
+
+        // 생성자함수를 쓰는 목적: 대부분의 값은 동일하지만, 몇가지의 옵션만 다를 때 사용하면
+                                // 효율적 코딩, 메모리 낭비 줄일 수 있다
+
+
+        // 생성자 함수 사용하는 문법?
+        // function 생성자함수명(){         *****주의*****: 생성자함수명의 첫 번쨰 글자는 반드시 대문자로 표기해야 한다.
+        // this.속성="값",    
+        // this.속성="값"    
+        // }
+
+        // 생성자 함수를 객체로 만들어주는 명령
+        // let 변수명 = new 생성자함수명()
+
+            function Car(color,wheel,roof,navi){
+                // 변하지 않는 것은 그대로 값을 넣어주면 된다.
+                // 바뀌는 부분(옵션 같은거)을 매개변수로 받도록 설정
+                this.name = "카니발";
+                this.door = 4;
+                this.oil = 13;
+                
+                // 사용자마다 커스텀된 것은 매개변수로 받아서 처리 (key값은 보통 변수명과 똑같이 설정한다)
+                this.color = color
+                this.wheel = wheel
+                this.roof = roof
+                this.navi = navi
+
+                this.boot = function(key){
+                    if(key=="on"){
+                    alert(`${this.name} 차량의 시동이 걸렸습니다.`)
+                    }
+                else if(key=="off"){
+                    alert(`${this.name} 차량의 시동이 꺼졌습니다.`)
+                    }
+                }
+            }
+        
+            let hongCar = new Car("black","16","white","system")
+            let jakeCar = new Car("red","18","panorama","inavi")
+            let rickyCar = new Car("blue","20","mini","default")
+
+            console.log(hongCar);
+            console.log(jakeCar);
+            console.log(rickyCar);
+
+            hongCar.boot("on")
+            hongCar.boot("off")
+
+
+
+        // let car = {
+        //     name: "카니발",
+        //     model: "9인승",
+        //     color: "white",
+        //     oil: 13,
+        //     // roof:
+        //     // wheel:
+
+        //     boot:function(key){
+        //         if(key=="on"){
+        //             alert(`${this.name} 차량의 시동이 걸렸습니다.`)
+        //         }
+        //         else if(key=="off"){
+        //             alert(`${this.name} 차량의 시동이 꺼졌습니다.`)
+        //         }
+        //     }
+        // }
+
+    </script>
+</body>
+</html>

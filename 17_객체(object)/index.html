@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체(Object)란?</title>
+</head>
+<body>
+    <script>
+        // 객체는 단어의 첫 글자가 대문자로 시작한다.
+
+        // 객체의 종류 
+        // 1. 개발자가 만드는 객체(object)
+        // 2. 내장된 객체(String, Number, Math, Date)
+
+        // 객체를 만드는 방법
+        
+        // 객체를 선언 및 호출
+
+        // 객체를 만드는(=객체 생성) 문법
+        /*let 객체변수명 = {
+            key값: 실제데이터1(값),
+            key값: 실제데이터2(값),
+            key값: 실제데이터3(값),
+            함수명:function(){
+
+            }
+        } 
+        *주의* 객체 안에서는 반드시 ','(콤마로) 구분해줘야 해*/
+
+        let hrm = {
+            no: "2001",
+            name: "Jenna",
+            age: 30,
+            addr: "서울특별시",
+            lang:{
+                en:"영어",
+                sp:"스페인어",
+                jp:"일본어",
+                ch:"중국어",                
+            },
+            pstn:"CEO",
+        }
+
+        // 객체에 접근해서 호출, 동적 자료추가, 자료삭제 등 자유롭게 할줄 알아야 해!
+        
+        // 객체 전체 호출
+        console.log(hrm)
+
+        // 객체 중에서 원하는 key값에 접근하고자 할 때? 
+        // ->  1. 객체.key값   : (=마침표 표기법) 
+        //     2. 객체['key값']   : 배열로 접근(=대괄호 표기법)     <- key값 넣을 때 꼭 따옴표 작성해야 해!
+        // alert(hrm.name+'\n')
+        console.log(hrm)
+        document.write(hrm.pstn+'<br>')
+        document.write(hrm['addr']+'<br>')
+        document.write(hrm.lang.en+'<br>')
+
+        // 객체 안에 있는 데이터를 수정할 때?
+        hrm.addr = "인천광역시"
+        console.log(hrm)
+        hrm['pstn'] = "CFO"
+        console.log(hrm)
+
+        // 객체 안에 있는 데이터를 삭제할 때?
+        delete hrm.no
+        console.log(hrm)
+
+        hrm.no= "2023_01"
+
+        let hrmList = [{   // 인사자료가 한두개가 아니기 때문에 동적으로 시스템을 돌려 자료를 추가
+            no: "2001",
+            name: "Jenna",
+            age: 30,
+            addr: "서울특별시",
+            lang:{
+                en:"영어",
+                sp:"스페인어",
+                jp:"일본어",
+                ch:"중국어",                
+            },
+            pstn:"CEO",
+        },
+        {   no: "2001",
+            name: "Dean",
+            age: 30,
+            addr: "서울특별시",
+            lang:{
+                en:"영어",
+                sp:"스페인어",
+                jp:"일본어",
+                ch:"중국어",                
+            },
+            pstn:"CFO",
+        },
+        {   no: "2001",
+            name: "Jake",
+            age: 40,
+            addr: "서울특별시",
+            lang:{
+                en:"영어",
+                sp:"스페인어",
+                jp:"일본어",
+                ch:"중국어",                
+            },
+            pstn:"manager",        
+        }]
+
+        // 배열과 객체를 같이 이용
+        // console.log("첫번째 사원: " + hrmList[0])   // 콘솔창에서 객체값을 출력하고 싶을 때에는 문자열과 왼쪽과 같이 결합하면 안되고 아래와 같이 ','를 사용
+        console.log("첫번째 사원: " , hrmList[0]);   
+        console.log("첫번째 사원의 이름: " , hrmList[0].name); 
+        console.log("첫번째 사원의 이름: " , hrmList[0]['addr']);  
+        console.log("두번째 사원의 직책: " , hrmList[1].pstn);   
+
+        
+    </script>
+</body>
+</html>

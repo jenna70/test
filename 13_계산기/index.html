@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 만들기</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="calc">
+        <!-- form에서 action은 백엔드 개발자가 처리하는 부분, methd="get"은 보안하지 않고 보내는 방식, post="get"은 보안해서 보내는 방식  -->
+        <form action="#" method="get"></form>
+        <fieldset>
+            <legend>계산기</legend>
+                <label for="data1">1번째 입력값</label>
+                <input type="text" id="data1">
+                <label for="data2">2번째 입력값</label>
+                <input type="text" id="data2">           
+                <div class="btns">
+                    <button type="button" id="btn1">+</button>
+                    <button type="button" id="btn2">-</button>
+                    <button type="button" id="btn3">x</button>
+                    <button type="button" id="btn4">÷</button>
+                    <button type="button" id="btn5">%</button>
+                    <button type="button" id="btn6">clear</button>
+                </div>
+                <label for="output">결과값 출력: </label>
+                <input type="text" id="output">            
+        </fieldset>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

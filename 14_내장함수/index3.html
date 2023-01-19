@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행지 자동 선택</title>
+</head>
+<body>
+    <script>
+        // 서울, 부산, 대구, 인천, 광주, 제주 중에서 컴퓨터가 자동 선택하도록 코딩
+        let city = ['서울', '부산', '대구', '인천', '광주', '제주']
+        function cityRandom(){
+            let num = Math.floor(city.length*Math.random()) 
+            return city[num]
+        }
+        alert(cityRandom())
+
+        // 로또 1-45까지 random으로 7개 자동 선택해주도록 코딩
+
+        let arr = [];
+        for(let i = 1; i <= 45; i++) {
+		arr.push(i);
+        }
+        console.log(arr);
+
+
+    </script>
+</body>
+</html>

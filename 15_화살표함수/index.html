@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6 version의 upgrade된 내용</title>
+</head>
+<body>
+    <script>
+ // 1: ...연산자    
+        //      => 모두 다..
+
+        let arr = ['홍길동', '유지정', 'jenna'];
+        // let name1 = arr[0];     // -> arr배열의 0번째를 변수에 기억시킨 것!
+        // let name2 = arr[1];
+        // let name3 = arr[2];
+        // alert(name1 + ' ' + name2 + ' ' + name3)
+
+
+        // let [name1, name2, name3] = arr     // <- line20~22의 내용을 1줄로 간결하게 표현한 것 (사실상 내용은 동일함) 
+        // alert(name1 + ' ' + name2 + ' ' + name3)
+
+        // let [name1,...irum] = arr
+        // // alert(name1 + ' ' + irum)       // <- '유지정'과 'jenna'는 둘이 함께 irum에 저장됨
+
+        // let num1 = [1,2,3,4,5]
+        // let num2 = ['a','b','c','d','e']
+        // let num3 = ['가','나','다','라','마']
+
+        // // let num4 = num1.concat(num2,num3)       // <- 모두 합쳐짐
+        // // document.write(num4)
+
+        // let num4 = [...num1,...num2,...num3]
+        // document.write(num4)
+
+
+
+
+// 2: 화살표함수
+        // function =>
+        // (매개변수)
+
+
+        // 일반 형식의 함수
+        let test = function(){
+            alert('함수입니다.')
+        }
+        test()
+
+
+        // 매개변수가 없는 화살표 함수
+        let test1 = () => {
+            alert('화살표 함수입니다.')
+        } 
+        test1()
+
+        // 화살표 함수에서 코드블록이 한줄일때에는 {} 생략 가능 => {}를 생략할 때에는 반드시 "return: 단어도 생략해야 한다
+        let test2 = () => {
+            alert('{} 생략한 화살표 함수입니다.')
+        } 
+        test2()
+
+        let test3 = function(x,y){
+            return x+y
+        }
+        document.write(test3(10,11)+ '<br>')
+
+
+        // 매개변수가 있는 화살표 함수
+        let test4 = (x,y) =>  {
+            let sum1 = x + y
+            return sum1
+        }
+        document.write(test4(10,11))
+
+
+    // Q1)
+        // function sum(){
+        //     const sum = function (a, b){
+        //         return a + b
+        //     }
+        //     return sum(40,10)
+        // }
+        // 위의 함수를 아래에다가 화살표 함수 형식으로 바꾸기
+
+        function sum(){
+            const sum = (a, b) => a +b;
+        
+            return sum(40,10)
+        }
+        document.write(sum(40,10))
+
+
+
+    // Q2)
+        let addNumber = function(a){
+            return function(b){
+                return function(c){
+                    return a + b + c;
+                }
+            }
+        }
+        // 위를 아래에다가 화살표 함수로 바꾸기
+
+        let addNumber2 = (a) => (b) => (c) => a + b + c
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

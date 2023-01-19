@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>자바스크립트에서 함수란?</h1>
+    <p>
+        프로그램 내애서 특정한 작업을 수행하기 위한 독립된 프로그램(모듈)
+    </p>
+    <ol>
+        <li>실행할 내용을 재사용이 가능하게 묶어서 사용</li>
+        <li>유지보수 용이</li>
+        <li>협업에 도움(서로의 코드를 보다 이해하기 쉬워지니까)</li>
+        <li>중복코드를 제거할 수 있다(효율성 증대)</li>
+    </ol>
+
+
+    <h2>함수는 선언과 호출이 분리되어 있기 때문에 반드시 선언을 한 이후에 호출을 해야만 실행된다!</h2>
+    <h2>함수를 선언하는 방법</h2>
+    <ol>
+        <li>function으로 함수명을 선언</li>
+        <li>매개변수: 함수에 저장되는 변수, 여러 개(갯수에 제한이 없음)일때에는 ','콤마로 구분한다.</li>
+        <li>return: 함수가 결과값으로 출력하는 값, return후에 함수가 종료된다</li>
+    </ol>
+    <h2>함수를 실행(콜)하는 방법</h2>
+    <ol>
+        <li>함수명() : 함수명을 호출</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <hr>
+    <script>
+        function test(){
+
+            // 실행할 코드의 집합을 작성
+            alert('자바스크립트 함수 테스트입니다.')
+        }
+        // 위는 함수를 선언만 하고 호출하지 않았기 때문에 실행되지 않는다.
+
+        // test()
+        // test()
+        // test()
+        // test()
+        // test()
+        // 한번 만들어진 함수는 몇번이든지 호출할 수 있다.
+
+        /* function 함수명(매개변수1, 매개변수2, 매개변수3){
+            코드집합
+            }
+
+            실행할함수명 (인자1, 인자2, 인자3)
+
+            * 매개변수와 인자는 짝이 맞아야 한다(동일한 숫자여야 함!)  
+            -> 짝이 맞지 않으면 짝없는 애는 undefined가 됨
+                (js는 유연한 언어이기 때문에 오류를 뱉지는 않아)
+        */
+
+        function dataChange(year,month,day){
+            console.log(year,month,day)
+        }
+        dataChange(2023,1,17)
+
+        // 익명함수: 이름이 없는 함수 => 변수에 담아서 쓸 수 있다
+                //  (그래서 '변수식 함수'라고 부르기도 함)
+        let test2 = function(){
+            alert('변수식함수(익명함수)')
+        }
+        // test2: 함수 변수 (이 변수는 함수를 담고 있기때문에!)
+        // => 호출할 때는 아래와 같이 사용하면 된다.
+        // test2()
+
+        /* return의 용도
+        1. 결과값(새로운 값) 반환
+        2. 함수를 종료
+        */
+
+        function test10(){
+            alert('첫번째 내용')
+            return
+            alert('두번째 내용')
+        }
+        // test10()
+
+        function test100(x,y){
+            let res = x + y
+            return res
+        }
+        alert(test100(10,20))
+
+
+    </script>
+</body>
+</html>

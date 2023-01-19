@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2</title>
+</head>
+<body>
+    <!-- Q2) 함수를 정의하여 다음과 같이 출력 
+            : 웹디는 5번 출력
+            프론트웹개발자는 3번 출력
+            백엔드웹개발자는 2번씩 반복 출력 -> 반복문 사용
+
+        (매개변수 있어야 함) -->
+    <script>
+
+        function prt(job,num){
+            for(let i=0; i < num; i++){
+            document.write(`저의 직업은 ${job}입니다<br>`)
+            }
+        }
+    
+        prt('웹디자이너',5)
+        prt('프론트엔드웹개발자',3)
+        prt('백엔드웹개발자',3)
+
+    </script>   
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율계산기</title>
+</head>
+<body>
+    <script>
+        // 환율계산기 (달러 -> 원) 달러, 유로, 엔화, 원
+        let dollar = 1238
+
+        let exchange = prompt('환전할 금액을 입력하세요', '제발 숫자로 입력해주세요~')
+        if(isNaN(exchange) == true){
+            alert('반드시 정수로만 입력해주세요')
+        }else{
+            alert('환전금액: ' +  dollar * parseInt(exchange)+ '원')
+        }        
+
+
+        // Q) (숫자가 없는) 문자로만 입력했을 때에는 "반드시 정수로만 입력해주세요"라는 경고창 출력하도록 코딩
+        // if(isNan(exchange)){
+        //     alert('반드시 정수로만 입력해주세요')
+        // }
+
+
+
+
+        // Q) 고객이 외화종류를 선택할 수 있도록
+        // 달러, 엔화, 위안화
+        // select으로 받아서 그 값을 반환? 
+
+    </script>
+</body>
+</html>

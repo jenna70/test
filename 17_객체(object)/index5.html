@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <script>
+
+            function Car(color,wheel,roof,navi){
+                // 변하지 않는 것은 그대로 값을 넣어주면 된다.
+                // 바뀌는 부분(옵션 같은거)을 매개변수로 받도록 설정
+                this.name = "카니발";
+                this.door = 4;
+                this.oil = 13;
+                
+                // 사용자마다 커스텀된 것은 매개변수로 받아서 처리 (key값은 보통 변수명과 똑같이 설정한다)
+                this.color = color
+                this.wheel = wheel
+                this.roof = roof
+                this.navi = navi
+
+                this.boot = function(key){
+                    if(key=="on"){
+                    alert(`${this.name} 차량의 시동이 걸렸습니다.`)
+                    }
+                else if(key=="off"){
+                    alert(`${this.name} 차량의 시동이 꺼졌습니다.`)
+                    }
+                }
+            }
+
+        Car.prototype.name = "카니발"
+        Car.prototype.door = 4
+        Car.prototype.oil = 13
+        Car.prototype.boot = function(key){
+                    if(key=="on"){
+                    alert(`${this.name} 차량의 시동이 걸렸습니다.`)
+                    }
+                else if(key=="off"){
+                    alert(`${this.name} 차량의 시동이 꺼졌습니다.`)
+                    }
+                }
+        console.log(Car)
+
+
+    /*  prototype: 생성자함수로 생성한 객체 -> 같은 속성과 메서드를 공유
+
+
+    */
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문</title>
+</head>
+<body>
+        <ul id="list1">
+
+        </ul>
+
+        <script>
+
+            let ban = ['수빈','민기','영찬','현희','희진','지정','주원','현민','세훈','혜진','유진','유진2','현식'];          
+            
+            let i = 0;
+            while(i<ban.length){
+                document.getElementById('list1').innerHTML += '<li>'+ ban[i] + '</li>';
+                i++;
+            }
+
+            let data = document.querySelectorAll('#list1 li')
+            
+            let j = 0;
+            while(j<ban.length){
+                data[j].addEventListener('mouseenter',function(){
+                this.style.color="violet";
+                
+            })
+            j++;    
+            }
+
+            let k = 0;
+            while(k<ban.length){
+                data[k].addEventListener('mouseout',function(){
+                this.style.color="black";
+                
+            })
+            k++;    
+            }
+
+        </script>
+</body>
+</html>

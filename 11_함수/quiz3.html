@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz3</title>
+</head>
+<body>
+    <!-- Q3) 함수를 정의하여 다음과 같이 출력 
+            (이름을 매개변수로 받고 이름을 받은 값을 반환해주는 함수를 만들어라.)
+            : 안녕하세요 저의 이름은 000입니다
+            : 안녕하세요 저의 이름은 000입니다
+            : 안녕하세요 저의 이름은 000입니다
+            : 안녕하세요 저의 이름은 000입니다
+            : 안녕하세요 저의 이름은 000입니다
+            -->
+
+        <!-- <script>
+            let name = prompt('이름을 입력해주세요!','이름 입력') 
+            function prt(name){
+                document.write(`안녕하세요 저의 이름은 ${name}입니다.<br>`)
+            }
+
+            prt(name);
+            
+        </script> -->
+
+        <script>
+            function prt(name){
+                return name
+            }
+
+            let name = prt('홍길동')
+            document.write(`안녕하세요 저의 이름은 ${name}입니다.<br>`)
+            
+        </script>
+</body>
+</html>

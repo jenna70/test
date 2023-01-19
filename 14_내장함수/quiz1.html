@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 20px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+    // Q) 시간차 응용문제: 
+        // 화살표 함수를 이용해서
+        // 5초마다 [5초가 지났습니다], [10초가 지났습니다], [15초가 지났습니다], [20초가 지났습니다] ~~60초까지만 출력하는 프로그램
+        
+        let i = 1
+        let count = ()=> {
+            i++
+            if(i%5 == 0){
+                
+                document.getElementById('box').innerHTML=`${i}초가 지났습니다`
+
+            }
+        }
+
+        let countUp = setInterval(()=>count(),1000)
+
+        setTimeout(()=> clearInterval(countUp),60000)
+        
+    </script>
+</body>
+</html>

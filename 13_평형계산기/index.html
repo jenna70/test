@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>면적 계산기</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <div class="exp">
+        
+<form action="#">
+<fieldset>
+    <h3>면적계산기</h3>
+        <div class="inner1">
+            <ul>
+                <li>KB부동산사이트에서는 계량에 관한 법률 2조 제1항에 따라 2007.7.1부터 '평'단위를 사용하지 않습니다.</li>
+                <li>면적 계산 시 ㎡와 평의 비율은 121:400입니다. 1㎡는 0.3025평이고, 1평은 3.3058㎡입니다.</li>
+            </ul>
+        </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>㎡ ⇒ 평</td>
+                        <td><label for="data1"></label>
+                            <input type="text" id="data1">㎡</td>
+                        <td><button id="btn1">계산하기</button></td>
+                        <td><label for="output1"></label>
+                            <input type="text" id="output1">평</td>
+                    </tr>
+                    <tr>
+                        <td>평 ⇒ ㎡</td>
+                        <td><label for="data2"></label>
+                            <input type="text" id="data2">평</td>
+                        <td><button id="btn2">계산하기</button></td>
+                        <td><label for="output2"></label>
+                            <input type="text" id="output2">㎡</td>
+                    </tr>
+                </tbody>
+            </table>    
+</fieldset>
+</form>
+
+    </div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+body{
+    font-family: sans-serif;
+    background: rgb(199, 197, 197);
+}
+
+h1{
+    text-align: center;
+    margin: 70px 0;
+}
+
+.list{
+    width: 676px;
+    height: 85px;
+    /* border: 1px solid red; */
+    display: flex;
+    margin: auto;
+}
+
+.list li{
+    list-style: none;
+    width: 200px;
+    height: 85px;
+    text-align: center;
+    color: #fff;
+    line-height: 85px;
+    /* linear-gradient(to right->오른쪽, to top->윗쪽, to bottom->아랫쪽 */
+    /* background-image: linear-gradient(그라데이션 위쪽 색상 어디까지 그라 넣을건지 %로 표현, 마찬가지);    */
+    background-image: linear-gradient(to right #555 50%, #222 50%);
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+/* li:not(:last-child)  <- last-child만 빼고 나머지 li들을 모두 선택하는 가상 선택자*/
+.list li:not(:last-child){  
+    margin-right: 38px;
+}
+
+.list li:hover{
+    background-image: linear-gradient(#ff9835 50%, #cc0011 50%);
+}

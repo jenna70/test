@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2</title>
+</head>
+<body>
+    <script>
+        // Q) 학생들의 이름, 국어점수, 영어점수, 수학점수, 컴퓨터점수 데이터를 통해서
+        //    총점과 평균을 구하도록 코딩
+        //    (단, 생성자함수를 이용해서 만들고, prototype을 만들 것?)
+
+        function Score(name,score1,score2,score3,score4){
+            this.name = name
+            this.score1 = score1
+            this.score2 = score2
+            this.score3 = score3
+            this.score4 = score4
+        }
+
+        Score.prototype.sAvg = function(){
+            let sum = this.score1 + this.score2 + this.score3 + this.score4     // 여기서 this를 안붙이면 안돼.. 꼭 써야돼
+            let avg = sum / 4
+            return `학생이름: ${this.name} <br>  총점: ${sum}점 <br> 평균: ${avg}점<br><br>`
+        }
+
+        let student01 = new Score("홍길동",100,90,80,100)
+        let student02 = new Score("강호동",70,65,90,50)
+        let student03 = new Score("이영자",90,60,70,80)
+
+        document.write(`${student01.sAvg()}<br>`)
+        document.write(`${student02.sAvg()}<br>`)
+        document.write(`${student03.sAvg()}<br>`)
+
+        // console.log(student01)
+        // console.log(student02)
+        // console.log(student03)
+
+        // document.write(`학생이름: ${student01.name} <br>  총점: ${student01.sSum()}점 <br> 평균: ${student01.sAvg()}점<br><br>`)       
+        // document.write(`학생이름: ${student02.name} <br>  총점: ${student02.sSum()}점 <br> 평균: ${student02.sAvg()}점<br><br>`)       
+        // document.write(`학생이름: ${student03.name} <br>  총점: ${student03.sSum()}점 <br> 평균: ${student03.sAvg()}점`)       
+
+    </script>
+</body>
+</html>

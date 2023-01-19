@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간차함수</title>
+</head>
+<body>
+    <script>
+        // setTimeout()   -> 해당 시간이 되면 콜백함수를 딱 한번만 실행시키는 함수
+        // setInterval()    -> 매시간마다 콜백함수를 계속 실행하도록 해주는 함수
+        // clearTimeout()   -> setTimeout()를 중지할 떄 사용하는 함수
+        // ClearInterval(중지시킬 변수)   -> setInterval()를 중지할 떄 사용하는 함수
+        // parseInt()   -> 문자는 버리고 순수하게 숫자만 취하는 함수
+                        // 그래서 사실 Number()를 사용할 것을 권장
+        // Math.random()    -> 0과 1사이의 숫자 중에서 랜덤한 값을 뽑아주는 함수
+        // Math.floor()     -> 소수점을 버림해주는 함수
+
+
+        // 명령형식
+        // setInterval(콜백함수, 시간)
+        // Q) 매 1초마다 "n초가 지났습니다!" 라는 문자를 출력하도록 코딩
+            // let i = 1;
+            // let time = setInterval(function(){
+            //     document.write(`${i}초가 지났습니다!<br>`)
+            //     i++
+            // },1000)
+
+
+        // Q) setInterval 함수를 중지하도록 코딩 
+        // => setInterval 함수 자체를 time 이라는 변수에 담아버리고, 진행하면 됨
+        // setTimeout(function(){
+        //     clearInterval(time)
+        // },30000)
+
+
+        // Q) 5초 후에 네이버 사이트를 자동으로 연결하도록 코딩
+            setTimeout(function(){
+                location.href='http://www.naver.com'
+            },5000)
+
+
+        // Q) html객체를 이용해 카운트다운하도록 코딩
+        // 객체.innerHTML       => 객체를 변환해서 넣는 것
+        // innerText    => 텍스트를 넣는 것
+
+
+
+
+        // setTimeout(콜백함수,시간)
+        // 참고: JS에서 시간은 10의 -3승으로 표현하는 nano second이다 => 실제1초 = 1000
+
+
+        // Q) 10초가 지난 뒤 "10초가 지났습니다!" 라는 문자를 한번만 출력하도록 코딩
+            // setTimeout(콜백함수,시간)
+            // setTimeout(function(){
+            //     document.write('10초가 지났습니다!')
+            // },10000)
+
+
+
+
+
+
+
+        // 반복문
+        // for(i=0; i<10; i++){}
+        // for(let i in 배열명){} -> 배열이나 객체에서 많이 사용한다.
+        // for(let i of 배열명){}
+        // forEach((item,index)=>){} -> 배열이나 객체 데이터에 접근할 때 많이 사용한다.
+        // while
+        // do-while
+
+    </script>
+</body>
+</html>

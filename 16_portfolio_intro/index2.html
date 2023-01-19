@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM에 있는 복수의 객체 제어 </title>
+</head>
+<body>
+        <ul id="list1">
+
+        </ul>
+
+        <script>
+
+            let ban = ['수빈','민기','영찬','현희','희진','지정','주원','현민','세훈','혜진','유진','유진2','현식'];          
+            
+            for(let i = 0; i<ban.length; i++){
+                document.getElementById('list1').innerHTML += '<li>'+ ban[i] + '</li>';
+            }
+
+            let data = document.querySelectorAll('#list1 li')
+            console.log(data)
+
+            for(let i = 0; i<ban.length; i++){
+                data[i].addEventListener('mouseenter',function(){
+                this.style.color="violet";
+            })    
+            }
+
+            for(let i = 0; i<ban.length; i++){
+                data[i].addEventListener('mouseout',function(){
+                this.style.color="black";
+            })    
+            }
+
+
+
+
+        </script>
+</body>
+</html>

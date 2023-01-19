@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체모델(생성자함수)</title>
+</head>
+<body>
+<!-- <img       src="" alt="">  -->
+<!-- 객체명      속성   속성-->
+
+    <script>
+        // 객체 모델링: 현실 세계의 객체를 컴퓨터 언어인 자바스크립트 객체로 바꾸는 작업
+
+        // ex) 자동차 객체 모델링
+        // 자동차의 속성들
+            // 자동차 이름: 카니발
+            // 자동차 모델: 9인승
+            // 자동차 색상: white
+            // 자동차 연비: 13km 
+        // 자동차의 메소드(함수) -> 실제로 동작하는 것
+            // 1. 시동을 건다/끈다
+            // 2. 차가 움직인다
+            // 3. 차가 멈춘다
+
+
+
+        // 완성된 하나의 틀을 생성자함수를 이용해서 제작할거야
+        // 생성자 함수 사용하는 문법?
+        // function 생성자함수명(){         *****주의*****: 생성자함수명의 첫 번쨰 글자는 반드시 대문자로 표기해야 한다.
+        // this.속성="값",    
+        // this.속성="값"    
+        // }
+
+        // 생성자 함수를 객체로 만들어주는 명령
+        // let 변수명 = new 생성자함수명()
+
+
+
+        let car = {
+            name: "카니발",
+            model: "9인승",
+            color: "white",
+            oil: 13,
+            // roof:
+            // wheel:
+
+            boot:function(key){
+                if(key=="on"){
+                    alert(`${this.name} 차량의 시동이 걸렸습니다.`)
+                }
+                else if(key=="off"){
+                    alert(`${this.name} 차량의 시동이 꺼졌습니다.`)
+                }
+            }
+        }
+        // car.boot()
+
+        car.boot("on")
+        car.boot("off")
+
+
+    </script>
+</body>
+</html>
